@@ -19,4 +19,4 @@ If you have your own Rust code examples to share or want to improve existing one
 ## Get Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/swataswayam-14/rusty-cookbook-.git
+   git clone https://github.com/swataswayam-14/rusty-cookbook.git
