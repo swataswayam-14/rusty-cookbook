@@ -1,3 +1,4 @@
+cargo new <file_name> --lib --> This command will create a new library project named <file_name> with a lib.rs file and a tests directory containing a lib.rs test file.
 cargo test -- --test-threads=1    --> If you don’t want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the --test-threads flag and the number of threads you want to use to the test binary.
 
 
