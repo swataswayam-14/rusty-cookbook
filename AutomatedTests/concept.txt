@@ -1,0 +1,12 @@
+cargo test -- --test-threads=1    --> If you don’t want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the --test-threads flag and the number of threads you want to use to the test binary.
+
+
+We set the number of test threads to 1, telling the program not to use any parallelism. Running the tests using one thread will take longer than running them in parallel, but the tests won’t interfere with each other if they share state.
+
+cargo test -- --show-output  --> If we want to see printed values for passing tests as well, we can tell Rust to also show the output of successful tests with --show-output.
+
+cargo test test_add  --> This command ran all tests with test_add in the name and filtered out other tests whose names doesnot start with this.
+
+cargo test -- --ignored   --> If we want to run only the ignored tests, we can use cargo test -- --ignored
+
+cargo test -- --include-ignored  --> If you want to run all tests whether they’re ignored or not.
