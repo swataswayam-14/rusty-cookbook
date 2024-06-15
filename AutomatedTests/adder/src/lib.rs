@@ -5,10 +5,49 @@ pub fn mul(left: usize, right: usize) -> usize {
     left * right
 }
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
+    #[test]
+    fn larger_can_hold_smaller(){
+        let smaller = Rectangle {
+            width: 2,
+            height: 3
+        };
+        let larger = Rectangle {
+            width: 7,
+            height: 8
+        };
+
+        assert!(larger.can_hold(&smaller));
+    }
+    #[test]
+    fn larger_can_hold_smaller2(){
+        let smaller = Rectangle {
+            width: 2,
+            height: 3
+        };
+        let larger = Rectangle {
+            width: 7,
+            height: 8
+        };
+        assert!(smaller.can_hold(&larger));
+    }
     #[test]
     fn it_works() {
         let result = add(2, 2);
